@@ -6,7 +6,7 @@ if(sessionStorage.getItem("sessionNotes")){
 
   for (const key in myObject) {
     const newNote = '<div class="note" id="note'+ key + '"><p>' +myObject[key]+ 
-    '</p><input class="erase-button" type="button" value="Borrar" onclick="eraseNote(\'note' + key + '\')"/></div>';
+    '</p><div><input class="erase-button" type="button" value="Borrar" onclick="eraseNote(\'note' + key + '\')"/></div></div>';
     element.insertAdjacentHTML( 'beforeend', newNote );
   }
   

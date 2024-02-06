@@ -29,6 +29,8 @@
   background-color: var(--Color-2);
   padding: 8px 16px;
 
+  border: none;
+
   color: var(--Color-3);
   text-align: center;
   font-family: var(--Font-App);
@@ -87,6 +89,8 @@
   background: var(--Color-5);
   padding: 4px 16px; 
 
+  border: none;
+
   color: var(--Color-2);
   text-align: center;
   font-family: var(--Font-App);
@@ -94,4 +98,11 @@
   font-style: normal;
   font-weight: var(--Weight-App);
   line-height: 120%; 
+}
+
+.note div{
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }

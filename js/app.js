@@ -26,7 +26,7 @@ function saveNote() {
     }
 
     const newNote = '<div class="note" id="notekey'+newID + '"><p>' + noteValue+ 
-    '</p><input class="erase-button" type="button" value="Borrar" onclick="eraseNote(\'note' + newID + '\')"/></div>';
+    '</p><div><input class="erase-button" type="button" value="Borrar" onclick="eraseNote(\'notekey' + newID + '\')"/></div></div>';
     element.insertAdjacentHTML( 'beforeend', newNote );
 
 
@@ -43,6 +43,7 @@ function saveNote() {
 
 function eraseNote(noteElement) {
   keyValue = (noteElement.substring(4));
+  console.log(keyValue);
   const element = document.getElementById(noteElement);
   element.parentNode.removeChild(element);
 

@@ -6,7 +6,7 @@
 
 The project is based on only JS, CSS and HTML.
 
-![homepage](https://raw.githubusercontent.com/Angelinis/Reto-Tecnico-Codeable/main/img/AppScreenshot.jpeg)
+![homepage](https://raw.githubusercontent.com/Angelinis/Reto-Tecnico-Codeable/main/img/AppScreenshot.JPG)
 
 ## Getting Started
 
