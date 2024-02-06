@@ -1,15 +1,13 @@
 function saveNote() {
   const element = document.getElementById("app-container");
   const noteValue = document.getElementById("newNote").value ;
+  let newID = 1;
 
   if (noteValue){
-      const newNote = '<div class="note"><p>' + noteValue+ 
-    '</p><input class="erase-button" type="button" value="Borrar" onclick="eraseNote()"/></div>';
-    element.insertAdjacentHTML( 'beforeend', newNote );
 
     if(sessionStorage.getItem("sessionNotes")){
 
-      const newID = parseInt(sessionStorage.getItem("noteID")) + 1;
+      newID = parseInt(sessionStorage.getItem("noteID")) + 1;
       sessionStorage.setItem("noteID", newID);
 
       let myObject = JSON.parse(sessionStorage.getItem("sessionNotes"));
@@ -19,23 +17,31 @@ function saveNote() {
 
     } else {
       let myObject = {};
-      myObject.key1 = noteValue;
+      myObject["key"+newID] = noteValue;
 
 
       sessionStorage.setItem("sessionNotes", JSON.stringify(myObject));
-      sessionStorage.setItem("noteID", "1");
+      sessionStorage.setItem("noteID", newID);
 
     }
 
+    const newNote = '<div class="note" id="notekey'+newID + '"><p>' + noteValue+ 
+    '</p><input class="erase-button" type="button" value="Borrar" onclick="eraseNote(\'note' + newID + '\')"/></div>';
+    element.insertAdjacentHTML( 'beforeend', newNote );
+
+
+
     document.getElementById("newNote").value = "";
   } else {
-    alert("La nota está vacía!");
+    alert("Por favor, revisar la nota.");
   }
   
   
 }
 
-function eraseNote() {
-  console.log("erased");
+function eraseNote(noteElement) {
+  console.log(noteElement);
+  const element = document.getElementById(noteElement);
+  element.parentNode.removeChild(element);
 }
 
