@@ -1,0 +1,79 @@
+@import 'reset.css';
+@import 'global.css';
+
+.header{
+  color: var(--Color-1);
+  text-align: center;
+  font-family: var(--Font-App);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: var(--Weight-App);
+  line-height: 120%; 
+}
+
+.container{
+  margin-top: 32px;
+  margin-bottom: 32px;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-container{
+  margin: 16px;
+}
+
+#save-button{
+  margin-top: 8px;
+  border-radius: 16px;
+  background-color: var(--Color-2);
+  padding: 8px 16px;
+
+  color: var(--Color-3);
+  text-align: center;
+  font-family: var(--Font-App);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: var(--Weight-App);
+  line-height: 120%; 
+  width: 100%;
+}
+
+#newNote{
+  border-radius: 16px;
+  border: 2px solid var(--Color-2);
+  background: var(--Color-3);
+  width: 100%;
+  padding: 16px;
+  height: 120px;
+
+
+  color: var(--Color-4);
+  font-family: var(--Font-App);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: var(--Weight-Note);
+  line-height: 120%; 
+
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.note{
+  border-radius: 16px;
+  border: 2px solid var(--Color-2);
+  background: var(--Color-3);
+
+
+  min-height: 107px;
+  margin: 16px;
+  color: var(--Color-1);
+  font-family: var(--Font-App);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: var(--Weight-Note);
+  line-height: 120%; 
+
+  padding: 16px;
+
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../js/app.js" defer></script>
+    <title>Mis Notas</title>
+  </head>
+
+  <body>
+    <div id="app-container" class="container">
+      <h1 class="header">Mis Notas</h1>
+      <form class="form-container">
+        <textarea
+          type="text"
+          id="newNote"
+          name="newNote"
+          placeholder="Algo para recordar..."
+        ></textarea
+        ><br />
+        <input
+          id="save-button"
+          type="button"
+          value="Crear"
+          onclick="saveNote()"
+        />
+      </form>
+    </div>
+  </body>
+</html>
