@@ -39,9 +39,17 @@ function saveNote() {
   
 }
 
+
+
 function eraseNote(noteElement) {
-  console.log(noteElement);
+  keyValue = (noteElement.substring(4));
   const element = document.getElementById(noteElement);
   element.parentNode.removeChild(element);
+
+  let myObject = JSON.parse(sessionStorage.getItem("sessionNotes"));
+
+  delete myObject[keyValue];
+
+  sessionStorage.setItem("sessionNotes", JSON.stringify(myObject));
 }
 
